@@ -4,6 +4,9 @@ var index = require('./routes/index');
 var path = require('path');
 var bodyParser = require('body-parser');
 
+var env = process.env.NODE_ENV || 'development',
+    config = require('./config/config')[env];
+
 app.use(bodyParser.json()); 
 app.use(express.static(path.join(__dirname, './public')));
 app.use('/', index);
