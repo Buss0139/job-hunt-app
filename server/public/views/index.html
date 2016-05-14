@@ -13,10 +13,13 @@
     <script src="../vendor/angular-ui-router/angular-ui-router.min.js"></script>
     <script src="../assets/scripts/app.min.js"></script>
 
+    <base href="/">
+
 </head>
 
 <body ng-controller="MyController">
     {{greeting}}
+    <main ui-view></main>
 </body>
 
 </html>
