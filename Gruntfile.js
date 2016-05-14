@@ -4,13 +4,13 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
         uglify: {
             build: {
-                src: 'client/client.js',
-                dest: 'server/public/assets/scripts/client.min.js'
+                src: 'client/app.js',
+                dest: 'server/public/assets/scripts/app.min.js'
             }
         },
         watch: {
             scripts: {
-                files: ['client/client.js'],
+                files: ['client/app.js'],
                 tasks: ['uglify'],
                 options: {
                     spawn: false
@@ -32,22 +32,12 @@ module.exports = function(grunt) {
                     "angular/angular.min.js",
                     "angular/angular.min.js.map",
                     "angular/angular-csp.css",
-                    "bootstrap/*.*",
-                    "bootstrap/**/*.*"
+                    "angular-ui-router/release/angular-ui-router.min.js",
+                    "angular-animate/angular-animate.min.js",
+                    "angular-touch/angular-touch.min.js",
+                    "angular-ui-bootstrap"
                 ],
                 "dest": "server/public/vendor/"
-            }
-        },
-        jshint: {
-            files: ['Gruntfile.js', 'src/**/*.js', 'test/**/*.js'],
-            options: {
-                // options here to override JSHint defaults
-                globals: {
-                    jQuery: true,
-                    console: true,
-                    module: true,
-                    document: true
-                }
             }
         },
         sass: {
