@@ -1,2 +1,4 @@
 node_modules/
 .idea/
+server/public/vendor/*
+npm-debug.log
