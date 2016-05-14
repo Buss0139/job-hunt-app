@@ -1,0 +1,32 @@
+{
+  "name": "job-hunt-app",
+  "version": "1.0.0",
+  "description": "Job hunt management application for Hack The Gap 2016",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/the-amber-joy/job-hunt-app.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/the-amber-joy/job-hunt-app/issues"
+  },
+  "homepage": "https://github.com/the-amber-joy/job-hunt-app#readme",
+  "dependencies": {
+    "angular": "^1.5.5",
+    "body-parser": "^1.15.1",
+    "express": "^4.13.4",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "grunt": "^1.0.1",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-sass": "^1.0.0",
+    "grunt-contrib-uglify": "^1.0.1",
+    "grunt-contrib-watch": "^1.0.0"
+  }
+}
