@@ -12,14 +12,11 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, './public')));
 app.use('/', index);
 
-var server = app.listen(3000, function(){
-    var port = server.address().port;
-    console.log('Listening on port: ', port);
-});
+/*pg.defaults.ssl = true;
 
-pg.defaults.ssl = true;
+console.log('pg looks like ' + pg.defaults.ssl);
 pg.connect(config.db, function(err, client) {
-  if (err) throw err;
+  if (err) { console.log('Failed to connect to postgres ' + err); return; }
   console.log('Connected to postgres! Getting schemas...');
 
   client
@@ -27,6 +24,11 @@ pg.connect(config.db, function(err, client) {
     .on('row', function(row) {
       console.log(JSON.stringify(row));
     });
+});*/
+
+var server = app.listen(3000, function(){
+    var port = server.address().port;
+    console.log('Listening on port: ', port);
 });
 
 module.exports = app;
