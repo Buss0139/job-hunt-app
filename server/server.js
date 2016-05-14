@@ -17,7 +17,8 @@ app.use(express.static(path.join(__dirname, './public')));
 // ROUTES
 app.use('/main', main);
 app.use('/sample', sample);
-app.use('/', main);
+app.use('/', index);
+app.use('/*', main);
 
 
 
